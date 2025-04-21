@@ -1,0 +1,482 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 90vh;
+}
+
+/* Image section */
+.login-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* increase size */
+}
+
+.login-img img {
+    width: 100%;
+    height: 90vh;
+    max-height: 100%;
+    object-fit: fill;
+}
+
+.container {
+    flex: 1;
+    background-color: white;
+    border-radius: 8px;
+    padding: 40px;
+    /* box-shadow: 0 4px 8px rgba(24, 24, 24, 0.2); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
+
+.login-h1 {
+    color: rgb(27, 30, 67);
+    margin-bottom: 20px;
+}
+
+
+.login-h1 {
+    font-family: "Libre Baskerville", serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: xxx-large;
+}
+
+.login-input {
+    border-radius: 30px;
+    padding: auto 30px;
+    margin: 10px auto;
+}
+
+.login-input:focus {
+
+    border-color: rgb(59, 66, 171);
+}
+
+.label {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(27, 30, 67);
+
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: rgb(27, 30, 67);
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: rgb(14, 16, 40);
+}
+
+.error-msg {
+    text-align: center;
+    color: red;
+    padding: 4px;
+    margin: 2px;
+}
+
+.success-msg {
+    text-align: center;
+    color: green;
+    padding: 4px;
+    margin: 2px;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .login-img,
+    .container {
+        width: 100%;
+    }
+
+    .login-img {
+        height: 50vh;
+    }
+
+    .login-img img {
+        height: 100%;
+        width: auto;
+    }
+}
+
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #ffffff;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.login-button {
+    background-color: rgb(27, 30, 67);
+    margin: 20px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: white;
+
+}
+
+.login-button:hover {
+    background-color: rgb(14, 16, 40);
+    color: white;
+
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.new-user-link {
+    padding: 4px;
+    margin: 2px;
+    text-decoration: none;
+    font-family: system-ui;
+    color: rgb(27, 30, 67);
+    font-weight: 500;
+    font-style: italic;
+}
+
+.hover-underline-animation1 {
+    display: inline-block;
+    position: relative;
+    color: rgb(27, 30, 67);
+}
+
+.hover-underline-animation1::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(27, 30, 67);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation1:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.active-navpage {
+    position: relative;
+    /* Needed for the pseudo-element */
+    color: rgb(12, 8, 33);
+    /* Text color */
+}
+
+.active-navpage::after {
+    content: "";
+    /* Required for pseudo-element */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Position it at the bottom of the text */
+    height: 2px;
+    /* Thickness of the underline */
+    background-color: rgb(12, 8, 33);
+    /* Underline color */
+}
+
+/*  OUTPUT.JSX*/
+/* Overall Layout */
+.output-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+
+}
+
+/* Headings */
+.main-title {
+    text-align: center;
+    font-size: 36px;
+    color: #2a9d8f;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.op-h2 {
+    font-size: 28px;
+    color: #264653;
+    margin-bottom: 15px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Main Image and Section Layouts */
+.image-section,
+.analysis-section,
+.enhanced-image-section,
+.tumor-type-section {
+    margin-bottom: 50px;
+}
+
+.main-image {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.analysis-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.tumor-type {
+    font-size: 24px;
+    color: #e76f51;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Image Grid for Augmented and Similar Images */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin: 20px 0;
+}
+
+.image-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.grid-image {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.image-caption,
+.similarity-score {
+    font-size: 16px;
+    color: #264653;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-image {
+        max-width: 300px;
+    }
+
+    .grid-image {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-image {
+        max-width: 250px;
+    }
+
+    .grid-image {
+        max-width: 100px;
+    }
+}
+
+/* landing page */
+.landing-page {
+    position: relative;
+    min-height: 100vh;
+    background-color: #1e3a8a;
+    /* Replace Tailwind bg-blue-800 */
+    color: white;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.animated-background {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(30, 58, 138, 0.2);
+    /* Replaces bg-blue-700 opacity-20 */
+}
+
+.circle {
+    position: absolute;
+    background-color: #3b82f6;
+    /* Replaces bg-blue-500 */
+    border-radius: 50%;
+}
+
+.content-container {
+    position: relative;
+    z-index: 10;
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.subheading {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin-bottom: 3rem;
+}
+
+.image-container {
+    margin-bottom: 3rem;
+}
+
+.image {
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.primary-btn {
+    background-color: white;
+    color: #1e3a8a;
+    /* Replaces text-blue-800 */
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+    background-color: #bfdbfe;
+    /* Replaces hover:bg-blue-100 */
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.secondary-btn:hover {
+    background-color: white;
+    color: #1e3a8a;
+    /* Replaces hover:text-blue-800 */
+}
+
+.gradient-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6rem;
+    background: linear-gradient(to top, #1e40af, transparent);
+    /* Replaces Tailwind gradient */
+}
+
+.circular-image {
+    border-radius: 50%;
+    width: 300px;
+    /* Adjust to ensure the image has equal width and height */
+    height: 300px;
+    object-fit: cover;
+    /* Ensures the image fits properly within the circular frame */
+}
+
+/* navbar */
